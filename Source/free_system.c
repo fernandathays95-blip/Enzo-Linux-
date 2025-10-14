@@ -14,6 +14,7 @@ void show_banner() {
     FILE *fp = fopen(BANNER_PATH, "r");
     if (!fp) {
         printf("[FreeSystem] ERRO: Banner não encontrado em %s\n", BANNER_PATH);
+        system(INFO_EXEC " error"); // mostra Tux ASCII em caso de erro
         return;
     }
     char line[512];
@@ -30,7 +31,9 @@ void run_module(const char *module_path) {
     printf("[FreeSystem] Inicializando módulo: %s\n", module_path);
     int ret = system(module_path);
     if (ret != 0) {
-        printf("[FreeSystem] ATENÇÃO: módulo retornou código %d\n", ret);
+        printf("[FreeSystem] ERRO crítico detectado! Código: %d\n", ret);
+        printf("[FreeSystem] Mostrando fallback ASCII logo do Tux...\n");
+        system(INFO_EXEC " error"); // exibe Tux ASCII colorido
     } else {
         printf("[FreeSystem] Módulo finalizado com sucesso.\n");
     }
@@ -43,8 +46,7 @@ void prompt() {
         printf("[EnzoOS]:~$ ");
         if (!fgets(command, sizeof(command), stdin)) break;
 
-        // remover \n
-        command[strcspn(command, "\n")] = 0;
+        command[strcspn(command, "\n")] = 0; // remove \n
 
         // sair
         if (strcmp(command, "exit") == 0) {
@@ -59,6 +61,7 @@ void prompt() {
             printf("  module     - roda módulo 3D UI\n");
             printf("  3d         - roda 3D UI interativo\n");
             printf("  info       - mostra informações do sistema\n");
+            printf("  logo       - mostra Tux ASCII colorido\n");
             printf("  free       - reinicia o sistema\n");
             printf("  exit       - sair do sistema\n");
             continue;
@@ -82,6 +85,12 @@ void prompt() {
             continue;
         }
 
+        // mostrar logo ASCII do Linux
+        if (strcmp(command, "logo") == 0) {
+            system("./Source/UI-logics/linux_logo"); // Tux ASCII colorido
+            continue;
+        }
+
         // reiniciar
         if (strcmp(command, "free") == 0) {
             printf("[FreeSystem] Reiniciando sistema...\n");
@@ -90,9 +99,13 @@ void prompt() {
             continue;
         }
 
-        // se não reconhece, executa comando no shell
+        // se não reconhece, tenta executar comando no shell
         int ret = system(command);
-        if (ret != 0) printf("[FreeSystem] Comando retornou código %d\n", ret);
+        if (ret != 0) {
+            printf("[FreeSystem] Comando retornou código %d\n", ret);
+            printf("[FreeSystem] Mostrando fallback ASCII logo do Tux...\n");
+            system(INFO_EXEC " error"); // exibe Tux ASCII colorido
+        }
     }
 }
 
