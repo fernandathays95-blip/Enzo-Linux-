@@ -7,6 +7,7 @@
 #define BANNER_PATH "Source/banner/enzo-banner.txt"
 #define MODULE_EXEC "./Source/3D\\ UI/module"
 #define UI_EXEC "./Source/3D\\ UI/3d_ui_logic"
+#define INFO_EXEC "./Source/sys_info/info"
 
 // Função para exibir banner
 void show_banner() {
@@ -56,20 +57,28 @@ void prompt() {
             printf("Comandos disponíveis:\n");
             printf("  help       - mostra esta mensagem\n");
             printf("  module     - roda módulo 3D UI\n");
-            printf("  free       - reinicia o sistema FreeSystem\n");
+            printf("  3d         - roda 3D UI interativo\n");
+            printf("  info       - mostra informações do sistema\n");
+            printf("  free       - reinicia o sistema\n");
             printf("  exit       - sair do sistema\n");
             continue;
         }
 
-        // rodar módulo
+        // rodar módulo 3D básico
         if (strcmp(command, "module") == 0) {
             run_module(MODULE_EXEC);
             continue;
         }
 
-        // rodar 3D UI
+        // rodar 3D UI interativo
         if (strcmp(command, "3d") == 0) {
             run_module(UI_EXEC);
+            continue;
+        }
+
+        // mostrar informações do sistema
+        if (strcmp(command, "info") == 0) {
+            run_module(INFO_EXEC);
             continue;
         }
 
@@ -88,9 +97,10 @@ void prompt() {
 }
 
 int main() {
+    // mostrar banner animado
     show_banner();
 
-    // inicializar módulos básicos (opcional)
+    // inicializar módulo 3D básico (opcional)
     run_module(MODULE_EXEC);
 
     // iniciar prompt interativo
