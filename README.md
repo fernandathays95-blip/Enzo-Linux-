@@ -1,6 +1,6 @@
 # 🐧 Enzo Linux — Sistema Operacional Minimalista do Zero
 
-![Enzo Linux Banner](https://raw.githubusercontent.com/SEU_USUARIO/enzo-linux/main/enzo-init/enzo-banner.txt)
+![Enzo Linux Banner](https://github.com/fernandathays95-blip/Enzo-Linux-/blob/main/Source/banner/enzo-banner.txt)
 
 Enzo Linux é um **sistema operacional híbrido**, escrito em shell script e outros módulos, criado do zero, rodando inicialmente no Termux e com expansão futura para interface gráfica, reconhecimento de toques e módulos avançados.  
 Este é um projeto **open-source**, perfeito para quem quer estudar sistemas Linux minimalistas e interativos.
