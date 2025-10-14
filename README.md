@@ -21,7 +21,7 @@ Este é um projeto **open-source**, perfeito para quem quer estudar sistemas Lin
 
 Clique no botão abaixo para acessar o site oficial do projeto e o repositório completo:
 
-[![Acessar Site do Enzo Linux](https://img.shields.io/badge/Visitar-Site%20do%20Enzo%20Linux-blue?style=for-the-badge&logo=github)](https://SEU_SITE_DO_ENZO_LINUX.com)
+[![Acessar Site do Enzo Linux](https://img.shields.io/badge/Visitar-Site%20do%20Enzo%20Linux-blue?style=for-the-badge&logo=github)](https://github.com/fernandathays95-blip/Enzo-Linux-/tree/main/Source)
 
 > No site você poderá baixar o Enzo Linux, ver documentação detalhada, tutoriais e contribuições do projeto.
 
