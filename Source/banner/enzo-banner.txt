@@ -1,6 +1,22 @@
-███████╗███╗   ██╗███╗   ██╗ ██████╗ ██████╗ 
-██╔════╝████╗  ██║████╗  ██║██╔════╝██╔═══██╗
-█████╗  ██╔██╗ ██║██╔██╗ ██║██║     ██║   ██║
-██╔══╝  ██║╚██╗██║██║╚██╗██║██║     ██║   ██║
-███████╗██║ ╚████║██║ ╚████║╚██████╗╚██████╔╝
-       Enzo Linux — EnzoOS (Minimal Linux)
+ ███████╗███╗   ██╗███████╗ ██████╗ ██╗      ██████╗ ██████╗ 
+ ██╔════╝████╗  ██║██╔════╝██╔═══██╗██║     ██╔═══██╗██╔══██╗
+ █████╗  ██╔██╗ ██║█████╗  ██║   ██║██║     ██║   ██║██████╔╝
+ ██╔══╝  ██║╚██╗██║██╔══╝  ██║   ██║██║     ██║   ██║██╔═══╝ 
+ ███████╗██║ ╚████║███████╗╚██████╔╝███████╗╚██████╔╝██║     
+ ╚══════╝╚═╝  ╚═══╝╚══════╝ ╚═════╝ ╚══════╝ ╚═════╝ ╚═╝     
+
+╔══════════════════════════════════════════════════════════╗
+║                Enzo Linux — EnzoOS v1.0                 ║
+║        Sistema Operacional Minimalista / Futurista      ║
+║               Open-Source & Termux Ready               ║
+╠══════════════════════════════════════════════════════════╣
+║ Status: Boot sequence iniciado                           ║
+║ Kernel GPT: ONLINE                                       ║
+║ User/Sistema: Integrado / Root Supremo                   ║
+║ Inicializando módulos: shell, init, GUI (em breve)      ║
+║ Reconhecimento de toques: Pendente ativação             ║
+╚══════════════════════════════════════════════════════════╝
+
+>>> Iniciando Enzo Linux...
+>>> Todos os módulos carregados com sucesso
+>>> Digite 'help' para listar comandos do sistema
