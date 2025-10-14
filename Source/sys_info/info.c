@@ -38,7 +38,7 @@ void show_sys_info() {
     printf("  - Integração de módulos com interação direta\n\n");
 
     printf(">>> Para mais detalhes, continue acompanhando o projeto Enzo Linux.\n");
-    printf(">>> GitHub / Site oficial: https://SEU_SITE_DO_ENZO_LINUX.com\n");
+    printf(">>> GitHub / Site oficial: https://github.com/fernandathays95-blip/Enzo-Linux-/tree/main\n");
     printf("====================================\n");
 }
 
